@@ -1,0 +1,7 @@
+<main class="bg-neutral-50 w-screen h-screen flex flex-col justify-center items-center gap-5">
+    <h1 class="text-neutral-900 text-7xl font-semibold font-inknut">Lorem ipsum dolor sit amet</h1>
+    <p class="font-inknut w-1/2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam adipisci esse ratione repudiandae ipsum deleniti id nostrum excepturi est.</p>
+    <div class="flex justify-center items-center gap-3 mt-10">
+        <app-card *ngFor="let show of shows" [show]="show"/>
+    </div>
+</main>

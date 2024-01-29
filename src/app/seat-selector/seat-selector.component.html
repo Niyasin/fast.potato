@@ -1,0 +1,11 @@
+<div class="pb-8 pt-3 px-5 w-max">
+    <div class="flex gap-3" *ngFor ="let row of layout;let i = index" [style.width]="(row.length*22)+'px'">
+        <div class="relative flex gap-3 h-8">
+            <div *ngFor ="let seat of row;let j = index" class="absolute cursor-pointer" [style.transform]="'rotate('+getRot(j)+'deg)'" [style.left]="(j*22)+'px'" [style.top]="getOffset(j)+'px'">
+                <div *ngIf="seat!=0" class="w-5 h-6 border border-neutral-400 rounded-lg transition-all hover:bg-red-300 text-xs flex justify-center items-center" [style.color]="selected.has(seat)?'#fff':'#000'" [style.background]="selected.has(seat)?'#0e3247':'none'" (click)="handleSelect(seat)">{{seat}}</div>
+                <div *ngIf="seat==0" class="w-5 h-6"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
